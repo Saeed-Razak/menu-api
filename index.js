@@ -13,9 +13,10 @@ connectDB()
 app.use(express.json())
 app.use(morgan("dev"))
 app.use(foodRoute)
+app.use("/api", userRoute)
 
 
-const PORT =process.env.PORT||8000
+const PORT =process.env.PORT||9000
 
 //Home route
 app.get("/", (req, res )=>{
