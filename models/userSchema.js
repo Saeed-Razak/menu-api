@@ -1,4 +1,5 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const { boolean } = require("yup");
 
 const userSchema = mongoose.Schema({
     username:{
@@ -16,6 +17,10 @@ const userSchema = mongoose.Schema({
         type:String,
         required:true,
         
+},
+isAdmin:{
+    type:Boolean,
+    default:false
 },
 
    
